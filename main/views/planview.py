@@ -7,7 +7,7 @@ from main.views.moim import MoimListSerializer
 
 class PlanView(APIView):
     def get(self, request):
-        return Response("ok", status=200)  # 테스트용 Response
+        return Response("ok", status=200)
 
     def post(self, request):
         plan_serializer = MoimListSerializer(data=request.data)
@@ -19,7 +19,7 @@ class PlanView(APIView):
             return Response(plan_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def put(self, request):
-        return Response("ok", status=200)  # 테스트용 Response
+        return Response("ok", status=200)
 
     def delete(self, request):
-        return Response("ok", status=200)  # 테스트용 Response
+        return Response("ok", status=200)  

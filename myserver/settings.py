@@ -25,7 +25,8 @@ SECRET_KEY = 'e!jr2x$$#1d1*&s+0q+_u)*)---z4cn_8l)t1-%29euq73!s=g'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    ".ap-northeast-2.compute.amazonaws.com"
+    ".ap-northeast-2.compute.amazonaws.com",
+    '*'
 ]
 
 # Application definition
@@ -39,6 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
